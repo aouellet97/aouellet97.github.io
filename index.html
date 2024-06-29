@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandre Ouellet Fournier's Portfolio</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="public/css/styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+	<style>
+		body{
+			transition: background-color 0.4s ease;
+		}
+
+		#cursor {
+			display: inline-block; 
+			animation: blink-animations 0.7s infinite;
+		}
+
+		@keyframes blink-animations {
+			0%, 100% { opacity: 1; }
+			50% { opacity: 0; }
+		}
+	</style>
+</head>
+<body>
+    <header>	
+
+		<nav class="navbar navbar-expand-lg px-5 navbar-light bg-light py-4">
+			<a class="navbar-brand" href="#">Alexandre Ouellet Fournier</a>
+			<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+		  
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav ms-auto">
+				<li class="nav-item active">
+				  <a class="nav-link" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Skills</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Projects</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contact</a>
+				</li>
+				<li class="nav-item">
+					<button class="nav-link" onclick="switchLanguage()" id="language">fr</button>
+				</li>
+				<button class="btn btn-primary " onclick="switchLight()"><i class="bi bi-moon" id="lightSwitch"></i></button>
+				<li class="nav-item dropdown">
+
+				  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Something else here</a>
+				  </div>
+				</li>
+			  </ul>
+			
+			</div>
+		  </nav>
+    </header>
+    
+    <main id="content">
+		<span id="text"></span><span id="cursor">|</span>
+        <div   >
+            <h1 id="intro-h1">welcome test</h1>
+            <p id="intro-p">english version</p>
+        </div>
+    
+    </main>
+	<footer>
+	
+	</footer>
+	<script>
+		let light = true;
+
+		function switchLight()
+		{
+			const lightSwitch = document.getElementById('lightSwitch');
+			lightSwitch.className = '';
+			lightSwitch.classList.add('bi');
+			if(light){
+				light = false;
+				document.body.style.backgroundColor = '#333333'; 
+				lightSwitch.classList.add('bi-sun');
+			}
+			else{
+				light = true;
+				document.body.style.backgroundColor = 'white';
+				lightSwitch.classList.add('bi-moon');
+			}
+		}
+	</script>
+	<script>
+
+		const textElement = document.getElementById('text');
+		const textContent = 'hello hello'; 
+
+		function typeEffect(text, delay) 
+		{
+			let index = 0;
+			const intervalId = setInterval(() => {
+				textElement.textContent += text.charAt(index);
+				index++;
+				if (index >= text.length) {
+					
+					clearInterval(intervalId);
+				}
+			}, delay);
+		}
+
+		typeEffect(textContent, 70); 
+	</script>
+
+    <script src="public/js/language-switch.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
