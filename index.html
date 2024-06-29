@@ -27,63 +27,59 @@
 </head>
 <body>
     <header>	
-
-		<nav class="navbar navbar-expand-lg px-5 navbar-light bg-light py-4">
-			<a class="navbar-brand" href="#">Alexandre Ouellet Fournier</a>
-			<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-			</button>
-		  
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			  <ul class="navbar-nav ms-auto">
-				<li class="nav-item active">
-				  <a class="nav-link" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="#">About</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Skills</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Projects</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
-				</li>
-				<li class="nav-item">
-					<button class="nav-link" onclick="switchLanguage()" id="language">fr</button>
-				</li>
-				<button class="btn btn-primary " onclick="switchLight()"><i class="bi bi-moon" id="lightSwitch"></i></button>
-				<li class="nav-item dropdown">
-
-				  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">Action</a>
-					<a class="dropdown-item" href="#">Another action</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#">Something else here</a>
-				  </div>
-				</li>
-			  </ul>
-			
+		<nav class="navbar navbar-expand-lg navbar-light bg-light  py-4 ">
+			<div class="container ">
+					<a class="navbar-brand nav-link " href="/">Alexandre Ouellet Fournier</a>
+					<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse " id="navbarSupportedContent">
+						<div class="navbar-nav gap-3 ms-auto text-center">
+							<a class="nav-item nav-link" href="#" id="home">Home</a>
+							<a class="nav-item nav-link" href="#" id="about">About</a>
+							<a class="nav-item nav-link"  href="#"  id="project">Projects</a>
+							<a class="nav-item nav-link" href="#" >Contact</a>
+							
+								<button class="nav-link nav-item ps-lg-5"  onclick="switchLanguage()" id="language">fr</button>
+						
+						</div>
+					</div>
 			</div>
-		  </nav>
+		</nav>
+		
     </header>
     
-    <main id="content">
-		<span id="text"></span><span id="cursor">|</span>
-        <div   >
-            <h1 id="intro-h1">welcome test</h1>
-            <p id="intro-p">english version</p>
-        </div>
-    
+    <main id="content " class="container mt-5 pt-5">
+		<!--<span id="text"></span><span id="cursor">|</span>-->
+		
+		<div class="row">
+			<div class="col-6">
+				<h1 id="text"></h1>
+				<p id="intro-p">A <span class="fw-bold">junior full-stack developer</span> driven by curiosity and a passion for learning. I enjoy diving into both frontend and backend technologies, eager to expand my skills and contribute to innovative projects </p>
+				<button class="btn blue-bg rounded-5 py-3 px-5" id="project-button">PROJECTS</button>
+			</div>
+			<div class="col-6">
+				<img src="public/img/photo.jpg" alt="" style="width: 80%; border-radius: 50%;">
+			</div>
+		</div>
+		
+		<div class="col-8 m-auto mt-5 fade-in-fx">
+			<h1 class="text-center">ABOUT ME</h1>
+			<p>As a 42 student, a renowned worldwide coding school known for its collaborative, project-based learning approach, I've developed a strong foundation in problem-solving, autonomy, and teamwork. This global environment has shaped my ability to thrive in diverse settings and tackle challenges creatively.
+				In addition to learning web development, I've acquired foundational expertise in C and C++, enhancing my technical capabilities and enabling a thorough approach to software development projects.
+				Aside from programming, I have a deep passion for music. I also adore cats and am enthusiastic about traveling and learning languages.
+			</p>
+			
+			<p>I am currently seeking job opportunities where I can make a meaningful contribution, continue learning, and advance professionally. If there's a fitting opportunity that aligns with my skills and experience, please feel free to reach out. I look forward to connecting!</p>
+			<button class="btn blue-bg rounded-5 py-3 px-5" id="project-button">CONTACT</button>
+		</div>
+
     </main>
 	<footer>
-	
+		<button class="btn blue-bg " style="border-radius: 50%;  position: fixed; bottom: 25px; right: 25px;" onclick="switchLight()"><i class="bi bi-moon " id="lightSwitch"></i></button>
 	</footer>
 	<script>
 		let light = true;
-
 		function switchLight()
 		{
 			const lightSwitch = document.getElementById('lightSwitch');
@@ -91,7 +87,7 @@
 			lightSwitch.classList.add('bi');
 			if(light){
 				light = false;
-				document.body.style.backgroundColor = '#333333'; 
+				document.body.style.backgroundColor = '#242424'; 
 				lightSwitch.classList.add('bi-sun');
 			}
 			else{
@@ -100,16 +96,20 @@
 				lightSwitch.classList.add('bi-moon');
 			}
 		}
-	</script>
+		</script>
 	<script>
-
+		
 		const textElement = document.getElementById('text');
-		const textContent = 'hello hello'; 
-
+		const speed = 25;
+		let intervalId;
 		function typeEffect(text, delay) 
 		{
+			textElement.textContent = '';
 			let index = 0;
-			const intervalId = setInterval(() => {
+			if (intervalId) {
+				clearInterval(intervalId);
+			}
+			intervalId = setInterval(() => {
 				textElement.textContent += text.charAt(index);
 				index++;
 				if (index >= text.length) {
@@ -119,7 +119,7 @@
 			}, delay);
 		}
 
-		typeEffect(textContent, 70); 
+		typeEffect("HEY, I'M ALEX OUELLET FOURNIER", speed); 
 	</script>
 
     <script src="public/js/language-switch.js"></script>
