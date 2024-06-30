@@ -27,53 +27,134 @@
 						<a class="nav-item nav-link clickable" onclick="moveTo('#home-section')" id="home">Home</a>
 						<a class="nav-item nav-link clickable" onclick="moveTo('#about-section')" id="about">About</a>
 						<a class="nav-item nav-link clickable" id="project">Projects</a>
-						<a class="nav-item nav-link clickable">Contact</a>
+						<a class="nav-item nav-link clickable" onclick="scrollToBottom()" >Contact</a>
 						<button class="nav-link nav-item ps-lg-5" onclick="switchLanguage()" id="language">fr</button>
 					</div>
 				</div>
 			</div>
 		</nav>
     </header>
-    <main id="content " class="container mt-5 pt-5">		
-		<section>
-			<div class="row">
+    <main id="content " class="pt-5 pb-5">		
+		<section class="container">
+			<div class="row ">
 				<div class="col-6">
 					<h1 id="text"></h1>
 					<p id="intro-p">A <span class="fw-bold">junior full-stack developer</span> driven by curiosity and a passion for learning. I enjoy diving into both frontend and backend technologies, eager to expand my skills and contribute to innovative projects </p>
 					<button class="btn blue-bg rounded-5 py-3 px-5" id="project-button">PROJECTS</button>
 				</div>
 				<div class="col-6 ">
-					<img src="public/img/portrait.jpg" alt="portrait" style="width: 80%; border-radius: 50%;">
+					<img src="public/img/portrait.jpg"  alt="portrait" style="width: 80%; border-radius: 50%;">
 				</div>
 			</div>
 		</section>
 
 		
-		<section>
+		<section class="fade-in-fx-section " >
 			<div class="container">
-				<h1 id="skill-h1">SKILLS</h1>
-				<div>
-					<i class="devicon-html5-plain skill-style" data-name="html"></i>
-					<i class="devicon-css3-plain skill-style" data-name="css"></i>
-					<i class="devicon-javascript-plain skill-style" data-name="javascript"></i>
-					<i class="devicon-bootstrap-plain skill-style" data-name="bootstrap"></i>
-					<i class="devicon-sass-original skill-style" data-name="sass"></i>
-					<i class="devicon-nodejs-plain-wordmark skill-style" data-name="node js"></i>
-					<i class="devicon-react-original skill-style" data-name="react js"></i>
-					<i class="devicon-postgresql-plain skill-style" data-name="postgresql"></i>
-					<i class="devicon-linux-plain skill-style" data-name="linux"></i>
-					<i class="devicon-git-plain skill-style" data-name="git"></i>
-					<i class="devicon-docker-plain skill-style" data-name="docker"></i>
-					<i class="devicon-python-plain skill-style" data-name="python"></i>
-					<i class="devicon-c-plain skill-style" data-name="c"></i>
-					<i class="devicon-cplusplus-plain skill-style" data-name="c++"></i>
-					<i class="devicon-csharp-plain skill-style" data-name="c#"></i>
-					<i class="devicon-unity-plain skill-style" data-name="unity"></i>
+				<h1 id="skill-h1" class="text-center my-5 pt-5">SKILLS</h1>
+				<div class="row fw-bold">
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-html5-plain skill-style " data-level="2"></i>
+						</div>
+						<p class="  blue-text text-center">html</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-css3-plain skill-style" data-level="2"></i>
+						</div>
+						<p class="  text-center blue-text">css</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-javascript-plain skill-style " data-level="2"></i>
+						</div>
+						<p class="  text-center blue-text">javascript</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-bootstrap-plain skill-style " data-level="2"></i>
+						</div>
+						<p class="  text-center blue-text">bootstrap</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-sass-original skill-style " data-level="1"></i>
+						</div>
+						<p class="  text-center blue-text">sass</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-nodejs-plain-wordmark skill-style " data-level="2"></i>
+						</div>
+						<p class="  text-center blue-text">node js</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-react-original skill-style " data-level="2"></i>
+						</div>
+						<p class="  text-center blue-text">react js</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-postgresql-plain skill-style" data-level="2"></i>
+						</div>
+						<p class="  text-center blue-text">postgresql</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-linux-plain skill-style" data-level="2"></i>
+						</div>
+						<p class="  text-center blue-text">linux</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-git-plain skill-style" data-level="3"></i>
+						</div>
+						<p class="  text-center blue-text">git</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-docker-plain skill-style" data-level="2"></i>
+						</div>
+						<p class="  text-center blue-text">docker</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-python-plain skill-style" data-level="2"></i>
+						</div>
+						<p class="  text-center blue-text">python</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-c-plain skill-style" data-level="3"></i>
+						</div>
+						<p class="  text-center blue-text">c</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-cplusplus-plain skill-style" data-level="2"></i>
+						</div>
+						<p class="  text-center blue-text">c++</p>
+					</div>
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-csharp-plain skill-style" data-level="1"></i>
+						</div>
+						<p class="  text-center blue-text">c#</p>
+					</div>	
+					<div class="col-md-2 col-3">
+						<div class="text-center">
+							<i class="devicon-unity-plain skill-style" data-level="1"></i>
+						</div>
+						<p class="  text-center blue-text">unity</p>
+					</div>		
+					
 				</div>
 			</div>
 		</section>
 
-		<section class="fade-in-fx-section"  id="about-section">
+		<section class="fade-in-fx-section bg-light container"  id="about-section">
 			<div class="col-8 m-auto mt-5 ">
 				<h1 class="text-center">ABOUT ME</h1>
 				<p class="switch-text">As a 42 student, a renowned worldwide coding school known for its collaborative, project-based learning approach, I've developed a strong foundation in problem-solving, autonomy, and teamwork. This global environment has shaped my ability to thrive in diverse settings and tackle challenges creatively.
@@ -87,13 +168,41 @@
 		</section>
 
     </main>
-	<footer>
-		<button class="btn blue-bg" id="light-switch-btn" onclick="switchLight()"><i class="bi bi-moon" id="lightSwitch"></i></button>
+	<footer >
+		<div id="contact-section">
+			<div class="container fml ">
+				<p class="text-white  mt-5 big-text">CONTACT ME</p>
+				<h3 class="text-white fw-bold mt-5">SOCIALS</h3>
+				<a href="" class="social"><i class="bi bi-github"></i></a>
+				<a href="" class="social"><i class="bi bi-linkedin"></i></a>
+				<h3 class="text-white fw-bold mt-5">ALEXANDRE OUELLET FOURNIER</h3>
+				<p class="text-white">A junior full-stack developer driven by curiosity and a passion for learning. I enjoy diving into both frontend and backend technologies, eager to expand my skills and contribute to innovative projects</p>
+	
+				<a href="mailto:a.ouellet.fournier@gmail.com" class="social"><i class="bi bi-envelope-fill"></i></a>
+				<p>Feel free to </p>
+				<div class="text-center">
+					<p>&copy; 2024. Made by Alexandre Ouellet Fournier.</p>
+				</div>
+
+			</div>
+		</div>
 	</footer>
+	
+	<button class="btn blue-bg" id="light-switch-btn" onclick="switchLight()"><i class="bi bi-moon" id="lightSwitch"></i></button>
 
     <script src="public/js/language-switch.js"></script>
 	<script src="public/js/switch-light.js"></script>
 	<script src="public/js/effects.js"></script>
+
+	<script>
+		function scrollToBottom() {
+			
+			window.scrollTo({
+				top: document.body.scrollHeight,
+				behavior: 'smooth'
+			});
+		}
+		</script>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

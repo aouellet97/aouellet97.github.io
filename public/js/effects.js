@@ -46,21 +46,47 @@ document.querySelectorAll('.fade-in-fx-section').forEach((section) => {
 // smooth move to effect
 
 function moveTo(target) {
-	document.querySelector(target).scrollIntoView({behavior: 'smooth'});
+    let element = document.querySelector(target);
+  
+    let elementPosition = element.getBoundingClientRect().top;
+    let offsetPosition = elementPosition + window.scrollY - 100;
+    window.scrollTo({top: offsetPosition, behavior: 'smooth'});
 }
 
+
 // skill text effect
+
 let skillTitle = document.getElementById('skill-h1');
 const skillIcons = document.querySelectorAll('.skill-style');
 
 function showName(icon){
-	const name = icon.getAttribute('data-name');
+	const level = icon.getAttribute('data-level');
 	let title;
+	let name;
 	if(lang == 'en'){
 		title = 'SKILLS';
 	}
 	else{
 		title = 'COMPÉTENCES';
+	}
+	
+	if(level == '1' && lang == 'en'){
+		name = 'beginner';
+	}
+	else if(level == '2' && lang == 'en'){
+		name = 'intermediate';
+	}
+	else if(level == '3' && lang == 'en'){
+		name = 'advanced';
+	}
+	else if(level == '1' && lang == 'fr'){
+		name = 'débutant';
+	}
+	else if(level == '2' && lang == 'fr'){
+		name = 'intermédiaire';
+	}
+	else if(level == '3' && lang == 'fr'){
+		name = 'avancé';
 	}
 
 	skillTitle.innerText = title + " / " + name;
@@ -84,10 +110,6 @@ skillIcons.forEach((icon) => {
 	});
 	icon.addEventListener('mouseout', () => {
 		showTitle();
-	});
-	icon.addEventListener('touchstart', (event) => {
-		event.preventDefault();
-		showName(icon);
 	});
 });
 
