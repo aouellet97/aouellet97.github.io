@@ -10,7 +10,49 @@
     transform: translateX(5px);
 }
 
+body{
+	transition: background-color 0.4s ease;
+}
 
+.switch-text{
+	transition: color 0.4s ease;
+}
+
+.clickable {
+    cursor: pointer !important;
+}
+
+header:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 80px; 
+	background-color: #f0f0f0;
+	z-index: -1;
+}
+
+#light-switch-btn{
+	position: fixed; 
+	bottom: 25px; 
+	right: 25px;
+	border-radius: 50%;  
+}
+
+.skill-style{
+	font-size: 100px;
+	color: #1c5ec2;
+	transition: font-size 0.3s ease; 
+}
+
+.skill-style:hover{
+    font-size: 110px;
+	color: #3b7fe4;
+}
+/* -------- Fade in effect -------- */
+
+.fade-in-fx-section{
+	opacity: 0;
+}
 
 .fade-in-fx{
     opacity: 0; 

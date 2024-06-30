@@ -3,126 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Alexandre Ouellet Fournier's Portfolio</title>
+
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" href="public/css/styles.css">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-	<style>
-		body{
-			transition: background-color 0.4s ease;
-		}
-
-		#cursor {
-			display: inline-block; 
-			animation: blink-animations 0.7s infinite;
-		}
-
-		@keyframes blink-animations {
-			0%, 100% { opacity: 1; }
-			50% { opacity: 0; }
-		}
-	</style>
+	
+	<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+	
+          
+	<link rel="stylesheet" href="public/css/styles.css">
 </head>
 <body>
-    <header>	
-		<nav class="navbar navbar-expand-lg navbar-light bg-light  py-4 ">
-			<div class="container ">
-					<a class="navbar-brand nav-link " href="/">Alexandre Ouellet Fournier</a>
-					<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse " id="navbarSupportedContent">
-						<div class="navbar-nav gap-3 ms-auto text-center">
-							<a class="nav-item nav-link" href="#" id="home">Home</a>
-							<a class="nav-item nav-link" href="#" id="about">About</a>
-							<a class="nav-item nav-link"  href="#"  id="project">Projects</a>
-							<a class="nav-item nav-link" href="#" >Contact</a>
-							
-								<button class="nav-link nav-item ps-lg-5"  onclick="switchLanguage()" id="language">fr</button>
-						
-						</div>
+    <header  id="home-section">	
+		<nav class="navbar navbar-expand-lg navbar-light bg-light py-4 fixed-top">
+			<div class="container">
+				<a class="navbar-brand nav-link " href="/">Alexandre Ouellet Fournier</a>
+				<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse " id="navbarSupportedContent">
+					<div class="navbar-nav gap-3 ms-auto text-center">
+						<a class="nav-item nav-link clickable" onclick="moveTo('#home-section')" id="home">Home</a>
+						<a class="nav-item nav-link clickable" onclick="moveTo('#about-section')" id="about">About</a>
+						<a class="nav-item nav-link clickable" id="project">Projects</a>
+						<a class="nav-item nav-link clickable">Contact</a>
+						<button class="nav-link nav-item ps-lg-5" onclick="switchLanguage()" id="language">fr</button>
 					</div>
+				</div>
 			</div>
 		</nav>
-		
     </header>
-    
-    <main id="content " class="container mt-5 pt-5">
-		<!--<span id="text"></span><span id="cursor">|</span>-->
-		
-		<div class="row">
-			<div class="col-6">
-				<h1 id="text"></h1>
-				<p id="intro-p">A <span class="fw-bold">junior full-stack developer</span> driven by curiosity and a passion for learning. I enjoy diving into both frontend and backend technologies, eager to expand my skills and contribute to innovative projects </p>
-				<button class="btn blue-bg rounded-5 py-3 px-5" id="project-button">PROJECTS</button>
+    <main id="content " class="container mt-5 pt-5">		
+		<section>
+			<div class="row">
+				<div class="col-6">
+					<h1 id="text"></h1>
+					<p id="intro-p">A <span class="fw-bold">junior full-stack developer</span> driven by curiosity and a passion for learning. I enjoy diving into both frontend and backend technologies, eager to expand my skills and contribute to innovative projects </p>
+					<button class="btn blue-bg rounded-5 py-3 px-5" id="project-button">PROJECTS</button>
+				</div>
+				<div class="col-6 ">
+					<img src="public/img/portrait.jpg" alt="portrait" style="width: 80%; border-radius: 50%;">
+				</div>
 			</div>
-			<div class="col-6">
-				<img src="public/img/photo.jpg" alt="" style="width: 80%; border-radius: 50%;">
-			</div>
-		</div>
+		</section>
+
 		
-		<div class="col-8 m-auto mt-5 fade-in-fx">
-			<h1 class="text-center">ABOUT ME</h1>
-			<p>As a 42 student, a renowned worldwide coding school known for its collaborative, project-based learning approach, I've developed a strong foundation in problem-solving, autonomy, and teamwork. This global environment has shaped my ability to thrive in diverse settings and tackle challenges creatively.
-				In addition to learning web development, I've acquired foundational expertise in C and C++, enhancing my technical capabilities and enabling a thorough approach to software development projects.
-				Aside from programming, I have a deep passion for music. I also adore cats and am enthusiastic about traveling and learning languages.
-			</p>
-			
-			<p>I am currently seeking job opportunities where I can make a meaningful contribution, continue learning, and advance professionally. If there's a fitting opportunity that aligns with my skills and experience, please feel free to reach out. I look forward to connecting!</p>
-			<button class="btn blue-bg rounded-5 py-3 px-5" id="project-button">CONTACT</button>
-		</div>
+		<section>
+			<div class="container">
+				<h1 id="skill-h1">SKILLS</h1>
+				<div>
+					<i class="devicon-html5-plain skill-style" data-name="html"></i>
+					<i class="devicon-css3-plain skill-style" data-name="css"></i>
+					<i class="devicon-javascript-plain skill-style" data-name="javascript"></i>
+					<i class="devicon-bootstrap-plain skill-style" data-name="bootstrap"></i>
+					<i class="devicon-sass-original skill-style" data-name="sass"></i>
+					<i class="devicon-nodejs-plain-wordmark skill-style" data-name="node js"></i>
+					<i class="devicon-react-original skill-style" data-name="react js"></i>
+					<i class="devicon-postgresql-plain skill-style" data-name="postgresql"></i>
+					<i class="devicon-linux-plain skill-style" data-name="linux"></i>
+					<i class="devicon-git-plain skill-style" data-name="git"></i>
+					<i class="devicon-docker-plain skill-style" data-name="docker"></i>
+					<i class="devicon-python-plain skill-style" data-name="python"></i>
+					<i class="devicon-c-plain skill-style" data-name="c"></i>
+					<i class="devicon-cplusplus-plain skill-style" data-name="c++"></i>
+					<i class="devicon-csharp-plain skill-style" data-name="c#"></i>
+					<i class="devicon-unity-plain skill-style" data-name="unity"></i>
+				</div>
+			</div>
+		</section>
+
+		<section class="fade-in-fx-section"  id="about-section">
+			<div class="col-8 m-auto mt-5 ">
+				<h1 class="text-center">ABOUT ME</h1>
+				<p class="switch-text">As a 42 student, a renowned worldwide coding school known for its collaborative, project-based learning approach, I've developed a strong foundation in problem-solving, autonomy, and teamwork. This global environment has shaped my ability to thrive in diverse settings and tackle challenges creatively.
+					In addition to learning web development, I've acquired foundational expertise in C and C++, enhancing my technical capabilities and enabling a thorough approach to software development projects.
+					Aside from programming, I have a deep passion for music. I also adore cats and am enthusiastic about traveling and learning languages.
+				</p>
+				
+				<p>I am currently seeking job opportunities where I can make a meaningful contribution, continue learning, and advance professionally. If there's a fitting opportunity that aligns with my skills and experience, please feel free to reach out. I look forward to connecting!</p>
+				<button class="btn blue-bg rounded-5 py-3 px-5" id="project-button">CONTACT</button>
+			</div>
+		</section>
 
     </main>
 	<footer>
-		<button class="btn blue-bg " style="border-radius: 50%;  position: fixed; bottom: 25px; right: 25px;" onclick="switchLight()"><i class="bi bi-moon " id="lightSwitch"></i></button>
+		<button class="btn blue-bg" id="light-switch-btn" onclick="switchLight()"><i class="bi bi-moon" id="lightSwitch"></i></button>
 	</footer>
-	<script>
-		let light = true;
-		function switchLight()
-		{
-			const lightSwitch = document.getElementById('lightSwitch');
-			lightSwitch.className = '';
-			lightSwitch.classList.add('bi');
-			if(light){
-				light = false;
-				document.body.style.backgroundColor = '#242424'; 
-				lightSwitch.classList.add('bi-sun');
-			}
-			else{
-				light = true;
-				document.body.style.backgroundColor = 'white';
-				lightSwitch.classList.add('bi-moon');
-			}
-		}
-		</script>
-	<script>
-		
-		const textElement = document.getElementById('text');
-		const speed = 25;
-		let intervalId;
-		function typeEffect(text, delay) 
-		{
-			textElement.textContent = '';
-			let index = 0;
-			if (intervalId) {
-				clearInterval(intervalId);
-			}
-			intervalId = setInterval(() => {
-				textElement.textContent += text.charAt(index);
-				index++;
-				if (index >= text.length) {
-					
-					clearInterval(intervalId);
-				}
-			}, delay);
-		}
-
-		typeEffect("HEY, I'M ALEX OUELLET FOURNIER", speed); 
-	</script>
 
     <script src="public/js/language-switch.js"></script>
+	<script src="public/js/switch-light.js"></script>
+	<script src="public/js/effects.js"></script>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
