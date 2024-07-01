@@ -73,25 +73,24 @@ header:before {
     }
 }
 main{
-    position: relative;
+    position: static;
     z-index: 2;
   
-    margin-bottom: 93vh;
+    margin-bottom: 0;
     background-color: white;
 }
 
 footer {
-    position: fixed;
+    position: static;
     bottom: 0;
     width: 100%;
-    height: 93vh;  
+    height: auto;  
     background: #455266;
 }
 
 #contact-section{
    
-
-    position: absolute;
+    position: static;
     bottom: 0;
     width: 100%;
  
@@ -115,7 +114,50 @@ footer {
 	flex: 1; 
 }
 
-
+#alex-section{
+    display: none;
+}
 
 
 /*user vertical media querries to deal with the footer in horizontal*/
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+    
+}
+
+@media (min-width: 992px) {
+    
+    main{
+        position: relative;
+        z-index: 2;
+        margin-bottom: 600px;
+        
+        
+    }
+    
+    footer {
+        position: fixed;
+        bottom: 0;
+        height: 600px;  
+      
+    }
+    
+    #contact-section{
+       
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+     
+    }
+}
+
+@media (min-width: 1200px) {
+    
+}
+
+@media (min-width: 1400px) {
+
+  }
