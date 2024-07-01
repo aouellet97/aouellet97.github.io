@@ -61,15 +61,8 @@ const skillIcons = document.querySelectorAll('.skill-style');
 
 function showName(icon){
 	const level = icon.getAttribute('data-level');
-	let title;
 	let name;
-	if(lang == 'en'){
-		title = 'SKILLS';
-	}
-	else{
-		title = 'COMPÉTENCES';
-	}
-	
+		
 	if(level == '1' && lang == 'en'){
 		name = 'beginner';
 	}
@@ -89,7 +82,7 @@ function showName(icon){
 		name = 'avancé';
 	}
 
-	skillTitle.innerText = title + " / " + name;
+	skillTitle.innerText = icon.getAttribute('data-name') + " / " + name;
 }
 
 function showTitle(){

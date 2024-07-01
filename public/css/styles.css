@@ -76,7 +76,7 @@ main{
     position: relative;
     z-index: 2;
   
-    margin-bottom: 92vh;
+    margin-bottom: 93vh;
     background-color: white;
 }
 
@@ -84,27 +84,38 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 92vh;  
+    height: 93vh;  
     background: #455266;
 }
 
 #contact-section{
    
-    background-color: blue;
+
     position: absolute;
     bottom: 0;
     width: 100%;
  
 }
 
-.fml{
-    background-color: red;
-}
 .big-text{
     font-size: 60px;
 }
 
 .social{
     color: white;
-  
+
 }
+
+.card {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-body {
+	flex: 1; 
+}
+
+
+
+
+/*user vertical media querries to deal with the footer in horizontal*/
