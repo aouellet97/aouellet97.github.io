@@ -1,6 +1,8 @@
 let lang = 'en';
 
 let siteContent;
+let infoButtons = document.querySelectorAll('.info-button');
+let elements = document.querySelectorAll('[id]');
 
 fetch('site-content.json')
 .then( (response) => {
@@ -24,11 +26,17 @@ function switchLanguage() {
 	document.documentElement.lang = lang; 
 	typeEffect(siteContent['intro-h1'][lang], speed); 
 	
-	document.querySelectorAll('[id]').forEach((element) => {
+	infoButtons.forEach((button) => {button.textContent = siteContent['info-button'][lang];});
+	elements.forEach((element) => {
 		const id = element.id;
 		if (siteContent[id]) 
 		{
-			element.textContent = siteContent[id][lang];
+			if(id == 'intro-p'){
+				element.innerHTML = siteContent[id][lang];
+			}
+			else{
+				element.textContent = siteContent[id][lang];
+			}
 		}
 	});
 }

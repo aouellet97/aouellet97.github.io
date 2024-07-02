@@ -1,11 +1,23 @@
 .blue-bg{
     background-color: #1c5ec2!important;
     color: white;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease,  background-color 0.4s ease, color 0.4s ease;
+}
+
+.blue-bg-dark{
+    background-color: #bbd2f5!important;
+    color: #2B333F;
+    transition: transform 0.2s ease,  background-color 0.4s ease, color 0.4s ease;
 }
 
 .blue-text{
     color: #1c5ec2;
+    transition: color 0.4s ease;
+}
+
+#profile-img{
+    width: 80%;
+    border-radius: 50%;
 }
 
 .blue-bg:hover, .blue-bg:active{
@@ -14,8 +26,32 @@
     transform: translateX(5px);
 }
 
+.blue-bg-dark:hover, .blue-bg-dark:active{
+    background-color: #d6e5fc !important;
+    color: #2B333F !important;
+    transform: translateX(5px);
+}
+
+.card-img-top {
+  height: 100%; 
+   
+}
+
+.light-bg{
+    background-color: #F8F9FA;
+    transition: background-color 0.4s ease;
+}
+
+.justify{
+    text-align: justify;
+}
 body{
 	transition: background-color 0.4s ease;
+    overflow-x: hidden;
+}
+
+textarea{
+    resize: none;
 }
 
 .switch-text{
@@ -46,14 +82,8 @@ header:before {
 .skill-style{
 	font-size: 70px;
 	color: #1c5ec2;
-	transition: font-size 0.3s ease;
+    transition: color 0.4s ease;
 }
-
-.skill-style:hover{
-   font-size: 73px;
-	color: #3b7fe4;
-}
-/* -------- Fade in effect -------- */
 
 .fade-in-fx-section{
 	opacity: 0;
@@ -75,9 +105,10 @@ header:before {
 main{
     position: static;
     z-index: 2;
-  
+    overflow-x: hidden;
     margin-bottom: 0;
     background-color: white;
+    transition: background-color 0.4s ease;
 }
 
 footer {
@@ -85,15 +116,16 @@ footer {
     bottom: 0;
     width: 100%;
     height: auto;  
-    background: #455266;
+    
 }
 
 #contact-section{
-   
+    
     position: static;
     bottom: 0;
     width: 100%;
- 
+    background: #455266;
+    transition: background-color 0.4s ease;
 }
 
 .big-text{
@@ -114,19 +146,6 @@ footer {
 	flex: 1; 
 }
 
-#alex-section{
-    display: none;
-}
-
-
-/*user vertical media querries to deal with the footer in horizontal*/
-
-@media (min-width: 576px) {
-}
-
-@media (min-width: 768px) {
-    
-}
 
 @media (min-width: 992px) {
     
@@ -134,30 +153,17 @@ footer {
         position: relative;
         z-index: 2;
         margin-bottom: 600px;
-        
-        
     }
     
     footer {
         position: fixed;
         bottom: 0;
         height: 600px;  
-      
     }
     
     #contact-section{
-       
         position: absolute;
         bottom: 0;
         width: 100%;
-     
     }
 }
-
-@media (min-width: 1200px) {
-    
-}
-
-@media (min-width: 1400px) {
-
-  }

@@ -53,58 +53,21 @@ function moveTo(target) {
     window.scrollTo({top: offsetPosition, behavior: 'smooth'});
 }
 
-
-// skill text effect
-
-let skillTitle = document.getElementById('skill-h1');
-const skillIcons = document.querySelectorAll('.skill-style');
-
-function showName(icon){
-	const level = icon.getAttribute('data-level');
-	let name;
-		
-	if(level == '1' && lang == 'en'){
-		name = 'beginner';
-	}
-	else if(level == '2' && lang == 'en'){
-		name = 'intermediate';
-	}
-	else if(level == '3' && lang == 'en'){
-		name = 'advanced';
-	}
-	else if(level == '1' && lang == 'fr'){
-		name = 'débutant';
-	}
-	else if(level == '2' && lang == 'fr'){
-		name = 'intermédiaire';
-	}
-	else if(level == '3' && lang == 'fr'){
-		name = 'avancé';
-	}
-
-	skillTitle.innerText = icon.getAttribute('data-name') + " / " + name;
+function moveToBottom() {
+			
+	window.scrollTo({
+		top: document.body.scrollHeight,
+		behavior: 'smooth'
+	});
 }
 
-function showTitle(){
-	let title;
-	if(lang == 'en'){
-		title = 'SKILLS';
-	}
-	else{
-		title = 'COMPÉTENCES';
-	}
-	skillTitle.innerText = title;
-}
+// moving photo
 
+const movingImg = document.getElementById('profile-img');
+	
+window.addEventListener('scroll', () => {
+	//compatible on old browsers too
+	const scrollTop = window.scrollY || window.pageYOffset;
 
-skillIcons.forEach((icon) => {
-	icon.addEventListener('mouseover', () => {
-		showName(icon);
-	});
-	icon.addEventListener('mouseout', () => {
-		showTitle();
-	});
+	movingImg.style.transform = `translateX(${scrollTop}px)`;
 });
-
-
-

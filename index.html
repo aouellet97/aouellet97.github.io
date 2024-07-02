@@ -15,210 +15,211 @@
 </head>
 <body>
     <header  id="home-section">	
-		<nav class="navbar navbar-expand-lg navbar-light bg-light py-4 fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-light  py-4 fixed-top light-bg" id="nav-bar">
 			<div class="container">
 				<a class="navbar-brand nav-link " href="/">Alexandre Ouellet Fournier</a>
 				<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse " id="navbarSupportedContent">
-					<div class="navbar-nav gap-3 ms-auto text-center">
-						<a class="nav-item nav-link clickable" onclick="moveTo('#home-section')" id="home">Home</a>
-						<a class="nav-item nav-link clickable" onclick="moveTo('#about-section')" id="about">About</a>
-						<a class="nav-item nav-link clickable" id="project"  onclick="moveTo('#project-section')">Projects</a>
-						<a class="nav-item nav-link clickable" onclick="scrollToBottom()" >Contact</a>
-						<button class="nav-link nav-item ps-lg-5" onclick="switchLanguage()" id="language">fr</button>
+					<div class="navbar-nav gap-3 ms-auto text-center mt-3 mt-lg-0">
+						<a class="nav-item nav-link clickable mb-2 mb-lg-0 pb-0"  onclick="moveTo('#home-section')" id="home">Home</a>
+						<hr class="m-0 p-0">
+						<a class="nav-item nav-link clickable  mb-2 mb-lg-0 pb-0" onclick="moveTo('#about-section')" id="about">About</a>
+						<hr class="m-0 p-0">
+						<a class="nav-item nav-link clickable  mb-2 mb-lg-0 pb-0" id="project"  onclick="moveTo('#project-section')">Projects</a>
+						<hr class="m-0 p-0">
+						<a class="nav-item nav-link clickable   mb-2 mb-lg-0 pb-0" onclick="moveToBottom()" >Contact</a>
+						<hr class="m-0 p-0">
+						<button class="nav-link nav-item ps-lg-5 mb-0" onclick="switchLanguage()" id="language">fr</button>
 					</div>
 				</div>
 			</div>
 		</nav>
     </header>
-    <main id="content " class="pt-5 pb-5">		
+    <main class="pt-5 pb-5" id="main">		
 		<section class="container">
 			<div class="row ">
-				<div class="col-6">
-					<h1 id="text"></h1>
-					<p id="intro-p">A <span class="fw-bold">junior full-stack developer</span> driven by curiosity and a passion for learning. I enjoy diving into both frontend and backend technologies, eager to expand my skills and contribute to innovative projects </p>
+				<div class="col-6 ">
+					<h1 id="text" class="switch-text" ></h1>
+					<p class="switch-text" id="intro-p" >A <strong>junior full-stack developer</strong> driven by curiosity and a passion for learning. I enjoy diving into both frontend and backend technologies, eager to expand my skills and contribute to innovative projects </p>
 					<button class="btn blue-bg rounded-5 py-3 px-5" id="project-button" onclick="moveTo('#project-section')">PROJECTS</button>
 				</div>
-				<div class="col-6 ">
-					<img src="public/img/portrait.jpg"  alt="portrait" style="width: 80%; border-radius: 50%;">
+				<div class="col-6 " id="img-section">
+					<img src="public/img/portrait.jpg" alt="portrait" id="profile-img">
 				</div>
 			</div>
 		</section>
-		<section class="fade-in-fx-section " >
+		<section class="fade-in-fx-section">
 			<div class="container">
-				<h1 id="skill-h1" class="text-center my-5 pt-5">SKILLS</h1>
+				<h1 id="skill-h1" class="text-center my-5 pt-5 switch-text">SKILLS</h1>
 				<div class="row fw-bold">
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-html5-plain skill-style " data-level="2" data-name="html"></i>
+							<i class="devicon-html5-plain skill-style "></i>
 						</div>
-						<p class="  blue-text text-center">html</p>
+						<p class="blue-text text-center ">html</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-css3-plain skill-style" data-level="2" data-name="css"></i>
+							<i class="devicon-css3-plain skill-style"></i>
 						</div>
 						<p class="  text-center blue-text">css</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-javascript-plain skill-style " data-level="2" data-name="javascript"></i>
+							<i class="devicon-javascript-plain skill-style " ></i>
 						</div>
 						<p class="  text-center blue-text">javascript</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-bootstrap-plain skill-style " data-level="2" data-name="bootstrap"></i>
+							<i class="devicon-bootstrap-plain skill-style "></i>
 						</div>
 						<p class="  text-center blue-text">bootstrap</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-sass-original skill-style " data-level="1" data-name="sass"></i>
+							<i class="devicon-sass-original skill-style " ></i>
 						</div>
 						<p class="  text-center blue-text">sass</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-nodejs-plain-wordmark skill-style " data-level="2" data-name="node js"></i>
+							<i class="devicon-nodejs-plain-wordmark skill-style "></i>
 						</div>
 						<p class="  text-center blue-text">node js</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-react-original skill-style " data-level="2" data-name="react js"></i>
+							<i class="devicon-react-original skill-style " ></i>
 						</div>
 						<p class="  text-center blue-text">react js</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-postgresql-plain skill-style" data-level="2" data-name="postgresql"></i>
+							<i class="devicon-postgresql-plain skill-style" ></i>
 						</div>
 						<p class="  text-center blue-text">postgresql</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-linux-plain skill-style" data-level="2" data-name="linux"></i>
+							<i class="devicon-linux-plain skill-style" ></i>
 						</div>
 						<p class="  text-center blue-text">linux</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-git-plain skill-style" data-level="3" data-name="git"></i>
+							<i class="devicon-git-plain skill-style" ></i>
 						</div>
 						<p class="  text-center blue-text">git</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-docker-plain skill-style" data-level="2" data-name="docker"></i>
+							<i class="devicon-docker-plain skill-style" ></i>
 						</div>
 						<p class="  text-center blue-text">docker</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-python-plain skill-style" data-level="2" data-name="python"></i>
+							<i class="devicon-python-plain skill-style" ></i>
 						</div>
 						<p class="  text-center blue-text">python</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-c-plain skill-style" data-level="3" data-name="c"></i>
+							<i class="devicon-c-plain skill-style" ></i>
 						</div>
 						<p class="  text-center blue-text">c</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-cplusplus-plain skill-style" data-level="2" data-name="c++"></i>
+							<i class="devicon-cplusplus-plain skill-style" ></i>
 						</div>
 						<p class="  text-center blue-text">c++</p>
 					</div>
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-csharp-plain skill-style" data-level="1" data-name="c#"></i>
+							<i class="devicon-csharp-plain skill-style" ></i>
 						</div>
 						<p class="  text-center blue-text">c#</p>
 					</div>	
 					<div class="col-md-2 col-3">
 						<div class="text-center">
-							<i class="devicon-unity-plain skill-style" data-level="1" data-name="unity"></i>
+							<i class="devicon-unity-plain skill-style" ></i>
 						</div>
 						<p class="  text-center blue-text">unity</p>
 					</div>		
-					
 				</div>
 			</div>
 		</section>
-
-		<section class="fade-in-fx-section bg-light "  id="about-section">
-			<div class="col-8 m-auto mt-5 container">
-				<h1 class="text-center">ABOUT ME</h1>
-				<p class="switch-text">As a 42 student, a renowned worldwide coding school known for its collaborative, project-based learning approach, I've developed a strong foundation in problem-solving, autonomy, and teamwork. This global environment has shaped my ability to thrive in diverse settings and tackle challenges creatively.
+		<section class="fade-in-fx-section  pt-1 pb-5 light-bg"  id="about-section" >
+			<div class="col-12  col-lg-7 col-xl-6 col-xxl-5 m-auto mt-5 container">
+				<h1 class="text-center switch-text" id="about-h1">ABOUT ME</h1>
+				<p class="switch-text justify px-3 mt-3" id="about-text-1">As a 42 student, a renowned worldwide coding school known for its collaborative, project-based learning approach, I've developed a strong foundation in problem-solving, autonomy, and teamwork. This environment has shaped my ability to thrive in diverse settings and tackle challenges creatively.
 					In addition to learning web development, I've acquired foundational expertise in C and C++, enhancing my technical capabilities and enabling a thorough approach to software development projects.
 					Aside from programming, I have a deep passion for music. I also adore cats and am enthusiastic about traveling and learning languages.
 				</p>
-				
-				<p>I am currently seeking job opportunities where I can make a meaningful contribution, continue learning, and advance professionally. If there's a fitting opportunity that aligns with my skills and experience, please feel free to reach out. I look forward to connecting!</p>
-				<button class="btn blue-bg rounded-5 py-3 px-5" id="project-button" onclick="scrollToBottom()">CONTACT</button>
+				<p id="about-text-2" class="switch-text justify px-3">I am currently seeking job opportunities where I can make a meaningful contribution, continue learning, and advance professionally. If there's a fitting opportunity that aligns with my skills and experience, please feel free to reach out. I look forward to connecting!</p>
+				<button class="btn blue-bg rounded-5 py-3 px-5 mt-4 d-block m-auto" onclick="moveToBottom()">CONTACT</button>
 			</div>
 		</section>
 		<section id="project-section">
-			<h1 class="text-center mt-5 fade-in-fx-section">PROJECTS</h1>
+			<h1 class="text-center mt-5 fade-in-fx-section switch-text" id="project-title">PROJECTS</h1>
 			<div class="container mt-5">
 				<div class="row row-cols-1 row-cols-md-2 g-4">
 					<div class="col">
-					  <div class="card h-100 fade-in-fx-section">
+					  <div class="card h-100 fade-in-fx-section shadow">
 						<img src="public/img/aurora.gif" class="card-img-top" alt="photo of aurora site">
 						<div class="card-body">
-						  <h5 class="card-title">Aurora Tales</h5>
-						  <p class="card-text">First attempt at creating a page using Bootstrap. It serves as a learning project where I explore the basics of web development, focusing on responsive design and layout using Bootstrap framework. </p>
-						  <p class="card-text"><small class="text-muted">Technologies: HTML, CSS, Bootstrap, Javascript</small></p>
-						  <a href="https://github.com/aouellet97/AuroraTales" target="_blank" class="btn btn-primary">More info</a>
+						  <h5 class="card-title fw-bold">Aurora Tales</h5>
+						  <p class="card-text justify" id="aurora">First attempt at creating a page using Bootstrap. It serves as a learning project where I explore the basics of web development, focusing on responsive design and layout using Bootstrap framework. </p>
+						  <p class="card-text "><small class="text-muted">Technologies: HTML, CSS, Bootstrap, Javascript</small></p>
+						  <a href="https://github.com/aouellet97/AuroraTales" target="_blank" class="rounded-5 btn blue-bg info-button ">More info</a>
 						</div>
 					  </div>
 					</div>
 				  <div class="col">
-					<div class="card h-100 fade-in-fx-section">
-					  <img src="public/img/minishell.png" style="height: 100%;" class="card-img-top" alt="photo of minishell">
+					<div class="card h-100 fade-in-fx-section shadow">
+					  <img src="public/img/minishell.png" class="card-img-top" alt="photo of minishell">
 					  <div class="card-body">
-						<h5 class="card-title">Minishell</h5>
-						<p class="card-text">Custom implementation of a Bash-like shell developed as a school project. It features command parsing and execution with arguments, along with our own built-in commands like echo, cd, pwd, export, unset, env, and exit.</p>
+						<h5 class="card-title fw-bold">Minishell</h5>
+						<p class="card-text justify" id="minishell">Custom implementation of a Bash-like shell developed as a school project. It features command parsing and execution with arguments, along with our own built-in commands like echo, cd, pwd, export, unset, env, and exit.</p>
 						<p class="card-text"><small class="text-muted">Technologies: C, Bash</small></p>
-						<a href="https://github.com/aouellet97/42-minishell" target="_blank" class="btn btn-primary">More info</a>
+						<a href="https://github.com/aouellet97/42-minishell" target="_blank" class="rounded-5 btn blue-bg info-button">More info</a>
 					  </div>
 					</div>
 				  </div>
 				  <div class="col">
-					<div class="card h-100 fade-in-fx-section">
-					  <img src="public/img/irc.png" style="height: 100%;" class="card-img-top" alt="photo of irc">
+					<div class="card h-100 fade-in-fx-section shadow">
+					  <img src="public/img/irc.png"  class="card-img-top" alt="photo of irc">
 					  <div class="card-body">
-						<h5 class="card-title">IRC server</h5>
-						<p class="card-text">This project is about creating our own IRC server in c++ that follows the IRC protocol and that is compatible with LimeChat client.</p>
+						<h5 class="card-title fw-bold">IRC server</h5>
+						<p class="card-text justify" id="irc">This project is about creating our own IRC server in c++ that follows the IRC protocol and that is compatible with LimeChat client.</p>
 						<p class="card-text"><small class="text-muted">Technologies: C++</small></p>
-						<a href="https://github.com/aouellet97/ft_irc" target="_blank" class="btn btn-primary">More info</a>
+						<a href="https://github.com/aouellet97/ft_irc" target="_blank" class=" rounded-5 btn blue-bg info-button">More info</a>
 					  </div>
 					</div>
 				  </div>
 				  <div class="col">
-					<div class="card h-100 fade-in-fx-section">
+					<div class="card h-100 fade-in-fx-section shadow">
 					  <img src="public/img/cub3d.gif"  class="card-img-top" alt="photo of raycasting">
 					  <div class="card-body">
-						<h5 class="card-title">Raycasting</h5>
-						<p class="card-text">Implementation of raycasting in C, inspired by the iconic Wolfenstein 3D game engine. This project utilizes the  raycasting algorithm to render a 3D world on a 2D screen.</p>
+						<h5 class="card-title fw-bold">Raycasting</h5>
+						<p class="card-text justify" id="raycast">Implementation of raycasting in C, inspired by the iconic Wolfenstein 3D game engine. This project utilizes the  raycasting algorithm to render a 3D world on a 2D screen.</p>
 						<p class="card-text"><small class="text-muted">Technologies: C, MLX42</small></p>
-						<a href="https://github.com/aouellet97/Cub3D" target="_blank" class="btn btn-primary">More info</a>
+						<a href="https://github.com/aouellet97/Cub3D" target="_blank" class="rounded-5 btn blue-bg info-button">More info</a>
 					  </div>
 					</div>
 				  </div>
 				  <div class="col">
-					<div class="card h-100 fade-in-fx-section">
+					<div class="card h-100 fade-in-fx-section shadow">
 					  <img src="public/img/solong.gif" class="card-img-top" alt="photo of so long">
 					  <div class="card-body">
-						<h5 class="card-title">2D game</h5>
-						<p class="card-text">This project is a simple 2D game written in C using the MLX42 graphics library.</p>
+						<h5 class="card-title fw-bold">2D game</h5>
+						<p class="card-text justify" id="2dgame">This project is a simple 2D game written in C using the MLX42 graphics library.</p>
 						<p class="card-text"><small class="text-muted">Technologies: C, MLX42</small></p>
-						<a href="https://github.com/aouellet97/42-SoLong" target="_blank" class="btn btn-primary">More info</a>
+						<a href="https://github.com/aouellet97/42-SoLong" target="_blank" class="rounded-5 btn blue-bg info-button">More info</a>
 					  </div>
 					</div>
 				  </div>
@@ -233,63 +234,46 @@
 					<div class="col-lg-4 ">
 						<div class="row">
 							<div class="col-lg-12 col">
-								<h1 class="text-white mt-5 fw-bold">CONTACT ME</h1>
-								<p class="text-white">Feel free to reach me by submitting the form below, and I will get back to you as soon as possible!</p>
+								<h1 class="text-white mt-5 fw-bold" id="contact-h1">CONTACT ME</h1>
+								<p class="text-white" id="contact-text">Feel free to reach me by submitting the form below, and I will get back to you as soon as possible!</p>
 							</div>
 							<div class="col-lg-12 col text-lg-start text-center ">
 								<h4 class="text-white fw-bold mt-5">SOCIAL</h4>
-								<a href="" class="social h3 me-2"><i class="bi bi-github"></i></a>
-								<a href="" class="social h3"><i class="bi bi-linkedin"></i></a>
+								<a href="https://github.com/aouellet97" target="_blank"  class="social h3 me-2"><i class="bi bi-github"></i></a>
+								<a href="https://www.linkedin.com/in/alexandre-ouellet-fournier-a34778313/" target="_blank"  class="social h3"><i class="bi bi-linkedin"></i></a>
 							</div>
-
 						</div>
 					</div>
 					<div class="col-lg-8">
 						<form action="https://formspree.io/f/manwynen" method="POST" class="text-white py-3">
 							<div class="mb-3">
-								<label for="name" class="form-label">Your Name:</label>
+								<label for="name" class="form-label" id="name-text">Your Name:</label>
 								<input type="text" class="form-control" id="name" name="name" required>
 							</div>
 							<div class="mb-3">
-								<label for="email" class="form-label">Your Email:</label>
+								<label for="email" class="form-label" id="email-text">Your Email:</label>
 								<input type="email" class="form-control" id="email" name="email" required>
 							</div>
 							<div class="mb-3">
-								<label for="message" class="form-label">Your Message:</label>
-								<textarea class="form-control" id="message" name="message" rows="5" style="resize: none;" required></textarea>
+								<label for="message" class="form-label" id="message-text">Your Message:</label>
+								<textarea class="form-control" id="message" name="message" rows="5"  required></textarea>
 							</div>
-							<button type="submit" class="btn blue-bg">SUBMIT </button>
+							<button type="submit" class="btn blue-bg rounded-5 mt-2 py-2 px-3" id="submit-btn">SUBMIT </button>
 						</form>
 					</div>
-					
 				</div>
-				<div id="alex-section" class="w-50 pb-3">
-					<h4 class="text-white fw-bold mt-5">ALEXANDRE OUELLET FOURNIER</h4>
-					<p class="text-white">A junior full-stack developer driven by curiosity and a passion for learning. I enjoy diving into both frontend and backend technologies, eager to expand my skills and contribute to innovative projects</p>
-				</div>
-				<hr class="text-white">
+				<hr class="text-white mt-1">
 				<div class="text-center text-white mt-5 pb-3 ">
-					<p>&copy; 2024. Made by Alexandre Ouellet Fournier.</p>
+					<p>&copy; 2024. <span id="made-by"> Made by Alexandre Ouellet Fournier.</span></p>
 				</div>
 			</div>
 		</div>
 	</footer>
 	
-	<button class="btn blue-bg" id="light-switch-btn" onclick="switchLight()"><i class="bi bi-moon" id="lightSwitch"></i></button>
-
+	<button class="btn blue-bg " id="light-switch-btn" onclick="switchLight()"><i class="bi bi-moon" id="lightSwitch"></i></button>
     <script src="public/js/language-switch.js"></script>
 	<script src="public/js/switch-light.js"></script>
 	<script src="public/js/effects.js"></script>
-
-	<script>
-		function scrollToBottom() {
-			
-			window.scrollTo({
-				top: document.body.scrollHeight,
-				behavior: 'smooth'
-			});
-		}
-	</script>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
