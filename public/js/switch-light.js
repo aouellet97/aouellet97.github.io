@@ -8,6 +8,8 @@ const contactSection = document.getElementById('contact-section');
 const lightBgs = document.querySelectorAll('.light-bg');
 const navBar = document.getElementById('nav-bar');
 const buttons = document.querySelectorAll('.blue-bg');
+const cards = document.querySelectorAll('.card-body');
+const techs = document.querySelectorAll('.text-muted');
 
 function switchLight(){
 	lightSwitch.className = '';
@@ -34,6 +36,12 @@ function switchLight(){
 			element.classList.add('blue-bg-dark');
 			element.classList.remove('blue-bg');
 		});
+		cards.forEach((element) => {
+			element.style.backgroundColor = '#313a46';
+		});
+		techs.forEach((element) => {
+			element.classList.add('text-muted-dark');
+		});
 	}
 	else{
 		light = true;
@@ -52,6 +60,12 @@ function switchLight(){
 		buttons.forEach((element) => {
 			element.classList.remove('blue-bg-dark');
 			element.classList.add('blue-bg');
+		});
+		cards.forEach((element) => {
+			element.style.backgroundColor = 'white';
+		});
+		techs.forEach((element) => {
+			element.classList.remove('text-muted-dark');
 		});
 	}
 	skills.forEach((element) => {
